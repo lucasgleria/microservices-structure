@@ -62,7 +62,7 @@ O **Microservices Structure** é um projeto pessoal que demonstra a implementaç
 - ✅ **Serviço de Temporizador (timer-service):** Exemplo de serviço com lógica temporal.
 - ✅ **Frontend:** Interface de usuário para interagir com os microsserviços.
 - ✅ **Monitoramento** e Análise de Dados:
-  - **Prometheus: Coleta de métricas e dados operacionais dos microsserviços.
+  - **Prometheus:** Coleta de métricas e dados operacionais dos microsserviços.
   - **Grafana:** Criação de dashboards intuitivos para visualização e análise de métricas, permitindo insights profundos para Data Science e otimização do sistema.
 
 ## ⚙️ Pré-requisitos  
@@ -87,9 +87,31 @@ cd microservices-structure
 ```bash
 cd frontend
 npm install
-cd .. # Retorna para a raiz do projeto
-
 ```
+
+4. Crie um arquivo .env na pasta frontend para mudar a URL
+```bash
+PORT=3001 # Ou de sua preferencia
+
+# Portas utilizadas (NÃO COLOQUE NENHUMA DELAS AQUI)
+# 5000, 5001, 5002, 5003, 8000, 8080, 3000, 6379, 27017
+```
+
+5. Volte para a pasta raiz
+```bash
+cd ..
+```
+
+6. Crie um arquivo .env na pasta raiz do projeto
+```bash
+SECRET_KEY=sua_chave_secreta # Utilizei "mysupersecretkey123"
+ALGORITHM=H256
+REDIS_URL=redis://redis:6379 # Ou a sua porta
+MONGO_URI=mongodb://mongo:27017 # Ou a sua porta
+MONGO_DB_NAME=nome_do_seu_banco # Utilizei "microsserives-app
+ACESS_TOKEN_EXPIRE_MINUTES=30 # Ou o que preferir
+```
+
 4. Construa e inicie todos os serviços (incluindo Prometheus e Grafana) com Docker Compose:
 ```bash
 docker-compose up --build
@@ -112,7 +134,7 @@ npm start
 
 ### ▶️ Demonstração
 
-![Dashbords](https://media.giphy.com/media/h8RDGogSns9wpOJFzR/giphy.gif?cid=ecf05e476nxbv9p2cgbsl4v39c1ub0m9p48va5hjt2p76ewm&rid=giphy.gif&ct=g)
+![Microsservices](img-readme/Example.gif)
 
 
 _(Gif meramente ilustrativo)_

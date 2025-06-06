@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+motor
+pydantic
+pydantic[email]
+passlib[bcrypt]
+PyJWT
+python-jose
+python-jose[cryptography]
+python-dotenv
+prometheus-client

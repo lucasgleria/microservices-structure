@@ -1,0 +1,19 @@
+@import './theme.css';
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input, select {
+  font-family: inherit;
+}

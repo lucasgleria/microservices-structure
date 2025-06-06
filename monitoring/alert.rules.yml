@@ -1,0 +1,11 @@
+groups:
+  - name: microservices.rules
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance {{ $labels.instance }} down"
+          description: "The instance {{ $labels.instance }} has been down for more than 30 seconds."

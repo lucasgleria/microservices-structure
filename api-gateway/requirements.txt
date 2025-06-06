@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+httpx
+python-jose
+python-dotenv
+motor
+pydantic
+pydantic[email]
+passlib[bcrypt]
+PyJWT
+prometheus-client
+fastapi[all]
+aiofiles

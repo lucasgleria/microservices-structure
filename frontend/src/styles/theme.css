@@ -1,0 +1,15 @@
+:root {
+  --color-bg-start: #0A192F;
+  --color-bg-end: #112240;
+  --color-accent: #64FFDA;
+  --color-text: #CCD6F6;
+  --color-error: #FF6B6B;
+  --color-card-bg: #112240;
+  --color-input-bg: #233554;
+  --color-button-bg: #112240;
+  --color-button-hover: #233554;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --border-radius: 8px;
+  --transition: background-color 0.3s ease;
+}

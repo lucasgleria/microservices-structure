@@ -1,0 +1,5 @@
+.pytest_cache/
+.env
+pytest.ini
+run_all.bat
+tests/

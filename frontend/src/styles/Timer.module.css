@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--color-card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 420px;
+  text-align: center;
+}
+
+.formWrapper1 {
+  background-color: var(--color-card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 420px;
+  margin-top: 1rem;
+}
+
+.title {
+  color: var(--color-accent);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: var(--color-accent);
+  color: var(--color-bg-start);
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background-color: #52d4b5;
+}
+
+.backButton {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--color-accent);
+  color: var(--color-bg-start);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+.backButton:hover {
+  background-color: #52d4b5;
+}
+
+.status {
+  margin-top: 1rem;
+  color: var(--color-accent);
+}
+
+.error {
+  margin-top: 1rem;
+  color: var(--color-error);
+}

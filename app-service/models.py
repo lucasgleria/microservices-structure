@@ -1,0 +1,6 @@
+# app-service/models.py
+
+class App:
+    def __init__(self, name: str, description: str):
+        self.name = name
+        self.description = description

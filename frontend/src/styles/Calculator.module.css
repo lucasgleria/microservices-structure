@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.formWrapper {
+  background-color: var(--color-card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 320px;
+}
+
+.formWrapper1 {
+  background-color: var(--color-card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  margin-top: 1rem;
+}
+
+.title {
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.input, .select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #233554;
+  color: var(--color-text);
+}
+
+.input:focus, .select:focus {
+  outline: 2px solid var(--color-accent)
+}
+
+.button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--color-accent);
+  color: var(--color-bg-start);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+.button:hover {
+  background-color: #52d4b5;
+}
+
+.result {
+  margin-top: 1rem;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.error {
+  color: var(--color-error);
+  margin-top: 1rem;
+  text-align: center;
+}

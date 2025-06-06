@@ -1,0 +1,97 @@
+
+services:
+  auth-service:
+    build:
+      context: ./auth-service
+    env_file:
+      - .env
+    container_name: auth-service
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./auth-service:/app
+    depends_on:
+      - mongo
+    command: uvicorn main:app --host 0.0.0.0 --port 5000
+
+  app-service:
+    build:
+      context: ./app-service
+    container_name: app-service
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./app-service:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 5001
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+    env_file:
+      - .env
+    container_name: api-gateway
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api-gateway:/app
+    depends_on:
+      - auth-service
+      - app-service
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  calculator-service:
+    build:
+      context: ./calculator-service
+    env_file:
+      - .env
+    container_name: calculator-service
+    ports:
+      - "5002:5002"
+    volumes:
+      - ./calculator-service:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 5002
+
+  timer-service:
+    build:
+      context: ./timer-service
+    env_file:
+      - .env
+    container_name: timer-service
+    ports:
+      - "5003:5003"
+    volumes:
+      - ./timer-service:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 5003
+
+
+  mongo:
+    image: mongo:5.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/alert.rules.yml:/etc/prometheus/alert.rules.yml
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+      
+  redis:
+    image: redis:6.2
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongo_data:

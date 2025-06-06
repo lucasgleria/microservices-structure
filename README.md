@@ -112,7 +112,7 @@ MONGO_DB_NAME=nome_do_seu_banco # Utilizei "microsserives-app
 ACESS_TOKEN_EXPIRE_MINUTES=30 # Ou o que preferir
 ```
 
-4. Construa e inicie todos os serviços (incluindo Prometheus e Grafana) com Docker Compose:
+7. Construa e inicie todos os serviços (incluindo Prometheus e Grafana) com Docker Compose:
 ```bash
 docker-compose up --build
 ```

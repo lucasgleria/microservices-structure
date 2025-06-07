@@ -51,7 +51,8 @@ O **Microservices Structure** é um projeto pessoal que demonstra a implementaç
 - Grafana
 - FastAPI
 - MongoDB
-
+- Redis
+  
 ## ✨ Funcionalidades  
 
 - ✅ **API Gateway:** Ponto de entrada unificado para os serviços.
